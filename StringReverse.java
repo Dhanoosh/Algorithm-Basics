@@ -1,4 +1,4 @@
-public class Test {
+public class StringReverse {
 
 public static char[] reverseWords(char[] s) {
     int i=0;
@@ -14,7 +14,6 @@ public static char[] reverseWords(char[] s) {
     System.out.println(s);
  
     reverse(s, 0, s.length-1);
-    System.out.println(s);
 
     return s;
 }
@@ -29,10 +28,25 @@ public static void reverse(char[] s, int i, int j){
     }
 }  
 public static void main(String[] args) {
+
+    //reversing string without extra space
     String s1 =" My name is Dhanush";
     char[] s = s1.toCharArray();
-    String[] s2 = s1.split(" ");
     System.out.println(reverseWords(s));
+
+    //reversing string with extra space
+    String s2 =" My name is Dhanush";
+    int length = s2.length();
+    String[] str = s1.split(" ");
+    s2="";
+    for(int i=str.length-1;i>0;i--) {
+        s2 = s2+str[i]+" ";
+    }
+    System.out.println("----");
+    s2 = s2.substring(0, length-1);
+    System.out.println(s2);
+    
+
 }
     
 }
