@@ -29,24 +29,30 @@ public static void reverse(char[] s, int i, int j){
 }  
 public static void main(String[] args) {
 
-    //reversing string without extra space
-    String s1 =" My name is Dhanush";
+    //Reversing String:
+    //Method 1: - using String Buffer - uses extra space
+    String revStr = "Dhanush is a";
+    StringBuffer revStrBuff = new StringBuffer();
+    revStrBuff.append(revStr);
+    revStrBuff.reverse();
+    System.out.println(revStrBuff.toString());
+
+    System.out.println("----");
+    //Reversing Lines:
+    //Method 1: Boring - reversing line without extra space
+    String s1 ="My name is Dhanush";
     char[] s = s1.toCharArray();
     System.out.println(reverseWords(s));
 
-    //reversing string with extra space
-    String s2 =" My name is Dhanush";
-    int length = s2.length();
-    String[] str = s1.split(" ");
-    s2="";
-    for(int i=str.length-1;i>0;i--) {
-        s2 = s2+str[i]+" ";
-    }
     System.out.println("----");
-    s2 = s2.substring(0, length-1);
-    System.out.println(s2);
-    
-
+    //Method 2: Reversing line with extra space
+    String s2 ="My name is Dhanush";
+    String[] str = s2.split(" ");
+    s2="";
+    for(int j=str.length-1;j>=0;j--) {
+        s2 = s2+str[j]+" ";
+    }
+    System.out.println(s2.trim());
 }
     
 }
