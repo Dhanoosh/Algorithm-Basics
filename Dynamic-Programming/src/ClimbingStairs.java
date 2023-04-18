@@ -13,6 +13,7 @@ public class ClimbingStairs {
             return 1;
         }
         return countWays(n - 1) + countWays(n - 2) + countWays(n - 3);
+
     }
 
     //Top Down
