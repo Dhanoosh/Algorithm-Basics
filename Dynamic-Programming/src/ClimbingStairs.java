@@ -12,6 +12,7 @@ public class ClimbingStairs {
         if (n == 0) {
             return 1;
         }
+
         return countWays(n - 1) + countWays(n - 2) + countWays(n - 3);
 
     }
