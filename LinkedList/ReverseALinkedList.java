@@ -16,7 +16,6 @@ public class ReverseALinkedList {
             prev = curr;
             curr = next;
         }
-
         return prev;
     }
 }
